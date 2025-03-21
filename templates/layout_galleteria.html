@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La tradicional</title>
+<<<<<<< HEAD
+=======
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+>>>>>>> c942b45263fb9a0ed9eba666ca17b62a21488d64
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+    <link href="{{ url_for('static', filename='css/estilos_layout_galleteria.css') }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+
+    <!-- Menu -->
+    <header class="header">
+        <nav class="nav">
+<<<<<<< HEAD
+            <a href="{{ url_for('galletas') }}" class="{{ 'activo' if active_page == 'galletas' else '' }}">Galletas</a>
+            <a href="{{ url_for('ventas') }}" class="{{ 'activo' if active_page == 'ventas' else '' }}">Ventas</a>
+            <a href="{{ url_for('produccion') }}" class="{{ 'activo' if active_page == 'produccion' else '' }}">Producción</a>
+            <a href="{{ url_for('insumos') }}" class="{{ 'activo' if active_page == 'insumos' else '' }}">Insumos</a>
+            <a href="{{ url_for('ordenes') }}" class="{{ 'activo' if active_page == 'ordenes' else '' }}">Ordenes</a>
+            <a href="{{ url_for('ganancias') }}" class="{{ 'activo' if active_page == 'ganancias' else '' }}">Ganancias</a>
+            <a href="{{ url_for('administrador') }}" class="{{ 'activo' if active_page == 'administrador' else '' }}">Administrador</a>
+=======
+            <a href="" class="">Galletas</a>
+            <a href="" class="">Ventas</a>
+            <a href="" class="">Producción</a>
+            <a href="" class="">Insumos</a>
+            <a href="" class="">Ordenes</a>
+            <a href="" class="">Ganancias</a>
+            <a href="" class="">Administrador</a>
+            <a href="/recetas">Recetas</a>
+>>>>>>> c942b45263fb9a0ed9eba666ca17b62a21488d64
+        </nav>
+    </header>
+
+    {% block container %}
+    {% endblock %}
+</body>
+
+</html>
+=======
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Galletería Don Galleto{% endblock %}</title>
+    <link href="{{ url_for('static', filename='css/estilos.css') }}" rel="stylesheet" type="text/css"/>
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='img/galleto.png') }}" alt="Logo Don Galleto" class="logo">
+            <h1>GALLETERÍA DON GALLETO</h1>
+        </div>
+        <nav class="nav">
+            <a href="{{ url_for('insumos') }}" class="{% if active_page == 'insumos' %}activo{% endif %}">Insumos</a>
+            <a href="{{ url_for('ventas') }}" class="{% if active_page == 'ventas' %}activo{% endif %}">Ventas</a>
+            <a href="{{ url_for('produccion') }}" class="{% if active_page == 'produccion' %}activo{% endif %}">Producción</a>
+            <a href="{{ url_for('galletas') }}" class="{% if active_page == 'galletas' %}activo{% endif %}">Galletas</a>
+            <a href="{{ url_for('ordenes') }}" class="{% if active_page == 'ordenes' %}activo{% endif %}">Compras</a>
+            <a href="{{ url_for('ganancias') }}" class="{% if active_page == 'ganancias' %}activo{% endif %}">Ganancias</a>
+        </nav>
+    </header>
+    
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Galletería Don Galleto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+>>>>>>> 29e4626d003441249df87b45c3beeeb31ecd6b87
